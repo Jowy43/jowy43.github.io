@@ -20,7 +20,10 @@ import {
   Phone,
   GraduationCap,
   BookOpen,
-  CheckCircle2
+  CheckCircle2,
+  Lock,
+  MessageSquare,
+  Repeat
 } from 'lucide-react';
 
 const App = () => {
@@ -41,9 +44,9 @@ const App = () => {
 
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
             <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
+            <a href="#impact" className="hover:text-blue-600 transition-colors">Impact</a>
             <a href="#experience" className="hover:text-blue-600 transition-colors">Experience</a>
             <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
-            <a href="#education" className="hover:text-blue-600 transition-colors">Education</a>
           </div>
 
           <a href="mailto:joelps117@hotmail.es" className="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2">
@@ -60,25 +63,28 @@ const App = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          AVAILABLE FOR HIRE
+          🚀 Record: 95% Optimization (10h ➔ 30min)
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
-          Senior Software Developer <br className="hidden md:block" />
-          <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Spring Boot Expert</span>
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
+          Senior Backend Engineer <br className="hidden md:block" />
+          <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+             High-Performance Systems & AI Tooling
+          </span>
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-4 text-slate-500 mb-8 font-mono text-sm">
+        <div className="flex flex-wrap justify-center gap-4 text-slate-500 mb-8 font-mono text-xs md:text-sm">
           <span className="flex items-center gap-1"><MapPin size={14} /> Pontevedra, España</span>
           <span className="hidden md:inline text-slate-300">|</span>
-          <span className="flex items-center gap-1"><Phone size={14} /> +34 681 24 87 14</span>
+          <a href="https://www.linkedin.com/in/joel-piñeiro-suárez-834199203" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+            <Linkedin size={14} /> linkedin.com/in/joel-piñeiro-suárez
+          </a>
           <span className="hidden md:inline text-slate-300">|</span>
           <span className="flex items-center gap-1"><Mail size={14} /> joelps117@hotmail.es</span>
         </div>
 
         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-          Specialized in <strong>High-Performance Backend</strong>, <strong>Legacy Migrations</strong>, and <strong>AI-Driven Development</strong>.
-          Proven track record of optimizing critical processes (10h ➔ 30min) and architecting microservices.
+          <strong>Java 21 & Spring Boot Expert.</strong> I transform complex business logic into scalable architectures and build AI tools (Gems/Analyzers) to automate workflows.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -101,18 +107,6 @@ const App = () => {
                <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-50 flex items-center justify-center text-blue-600 text-6xl font-bold border border-blue-100 shadow-inner">
                  JP
                </div>
-               {/* Decorative elements */}
-               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100">
-                 <div className="flex items-center gap-3">
-                   <div className="bg-green-100 p-2 rounded-lg text-green-600">
-                     <Code size={20} />
-                   </div>
-                   <div>
-                     <p className="text-xs text-slate-500 font-semibold uppercase">Experience</p>
-                     <p className="text-lg font-bold text-slate-900">3+ Years</p>
-                   </div>
-                 </div>
-               </div>
             </div>
 
             <div className="md:w-2/3">
@@ -122,14 +116,13 @@ const App = () => {
               </h2>
               <div className="prose prose-slate text-slate-600 leading-relaxed space-y-4">
                 <p>
-                  Senior Software Developer with over 3 years of experience, specialized in <strong>Spring Boot</strong> and <strong>Microservices Architectures</strong>.
-                  My versatile trajectory ranges from building new solutions to high-performance optimization and modernizing critical legacy systems.
+                  Senior Software Developer with <strong>3+ years of experience</strong>, highly specialized in backend development with <strong>Spring Boot</strong> and <strong>Microservices architectures</strong>. I bring solid experience in technical coordination, ensuring code quality and efficiency in critical implementations.
                 </p>
                 <p>
-                  My differential value lies in technical efficiency: I combine deep mastery of <strong>Java and Databases</strong> with advanced use of <strong>Artificial Intelligence</strong> to audit code and accelerate development.
+                  I have worked in diverse sectors such as <strong>Maritime, ERP, Fashion, Automotive, and Energy</strong>, demonstrating adaptability to various technological and business challenges.
                 </p>
                 <p>
-                  I guarantee software quality through best practices (Code Review, Git) and act as a technical reference to facilitate the training and adoption of AI tools within teams.
+                  Currently, I develop proprietary solutions based on <strong>Artificial Intelligence (Gems and analyzers)</strong> to automate processes and optimize code quality. My focus on continuous improvement and mastery of agile methodologies drives me to deliver scalable, high-performance solutions.
                 </p>
               </div>
             </div>
@@ -137,51 +130,80 @@ const App = () => {
         </div>
       </section>
 
-      {/* Impact Metrics */}
-      <section className="py-20 bg-slate-50">
+      {/* Impact Metrics (Featured Projects) */}
+      <section id="impact" className="py-20 bg-slate-50">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-blue-50 p-3 rounded-xl text-blue-600"><Zap size={24} /></div>
-                <h3 className="text-lg font-semibold text-slate-900">Performance</h3>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Impact</h2>
+            <p className="text-slate-600">Quantifiable results and architectural achievements.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Card 1: Performance */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-lg transition-all group relative overflow-hidden">
+               <div className="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+               <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                <Zap size={24} />
               </div>
-              <p className="text-4xl font-bold text-slate-900 mb-2">95% <span className="text-base font-normal text-slate-500">Reduction</span></p>
-              <p className="text-sm text-slate-600">Optimized critical process execution time from <strong>10 hours to 30 minutes</strong> using Multi-threading & SQL tuning.</p>
+              <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-900">Extreme Performance</h3>
+                  <p className="text-sm text-blue-600 font-medium">NTT DATA</p>
+              </div>
+              <div className="flex gap-2 mb-4 text-xs font-mono text-slate-500">
+                  <span className="bg-slate-100 px-2 py-1 rounded">Multithreading</span>
+                  <span className="bg-slate-100 px-2 py-1 rounded">SQL Tuning</span>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Redesigned critical multi-threaded processes and optimized massive DB queries. Achieved a reduction in batch process execution time from <strong>10 hours to just 30 minutes</strong>, drastically increasing system availability.
+              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-purple-50 p-3 rounded-xl text-purple-600"><Server size={24} /></div>
-                <h3 className="text-lg font-semibold text-slate-900">Modernization</h3>
+            {/* Card 2: Architecture */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-lg transition-all group relative overflow-hidden">
+               <div className="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
+               <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                <Layers size={24} />
               </div>
-              <p className="text-4xl font-bold text-slate-900 mb-2">Java 21 <span className="text-base font-normal text-slate-500">Migration</span></p>
-              <p className="text-sm text-slate-600">Led the migration of a Maritime ERP from legacy systems to Spring Boot 3, Java 21 & Thymeleaf.</p>
+               <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-900">DDD & Event-Driven</h3>
+                  <p className="text-sm text-purple-600 font-medium">Imatia</p>
+              </div>
+               <div className="flex gap-2 mb-4 text-xs font-mono text-slate-500">
+                  <span className="bg-slate-100 px-2 py-1 rounded">Kafka</span>
+                  <span className="bg-slate-100 px-2 py-1 rounded">Keycloak</span>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Developed scalable microservices under <strong>Domain-Driven Design (DDD)</strong> principles. Implemented centralized security with Keycloak and orchestrated asynchronous messaging using <strong>Apache Kafka</strong> for high concurrency.
+              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-emerald-50 p-3 rounded-xl text-emerald-600"><Cpu size={24} /></div>
-                <h3 className="text-lg font-semibold text-slate-900">Innovation</h3>
+            {/* Card 3: AI Innovation */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-lg transition-all group relative overflow-hidden">
+               <div className="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+               <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
+                <Cpu size={24} />
               </div>
-              <p className="text-4xl font-bold text-slate-900 mb-2">AI <span className="text-base font-normal text-slate-500">Integration</span></p>
-              <p className="text-sm text-slate-600">Created custom Gems for code auditing and accelerated SDLC. Technical lead for AI adoption.</p>
+              <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-900">AI Tooling & Auto</h3>
+                  <p className="text-sm text-emerald-600 font-medium">Nunegal</p>
+              </div>
+               <div className="flex gap-2 mb-4 text-xs font-mono text-slate-500">
+                  <span className="bg-slate-100 px-2 py-1 rounded">GenAI</span>
+                  <span className="bg-slate-100 px-2 py-1 rounded">Analyzers</span>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Created internal tools to empower the team: developed <strong>Custom Gems</strong> for automatic format translations and <strong>AI Code Analyzers</strong> that standardize and speed up Pull Request reviews.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Experience Timeline */}
-      <section id="experience" className="py-20 relative overflow-hidden">
-        {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-50">
-           <div className="absolute top-1/3 -right-64 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl"></div>
-           <div className="absolute bottom-1/3 -left-64 w-96 h-96 bg-purple-100/50 rounded-full blur-3xl"></div>
-        </div>
-
+      <section id="experience" className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <div className="flex items-center justify-between mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Experience</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Experience Timeline</h2>
             <div className="hidden md:block h-px flex-1 bg-slate-200 ml-8"></div>
           </div>
 
@@ -189,54 +211,26 @@ const App = () => {
 
             {/* Job 1: Nunegal */}
             <div className="relative md:grid md:grid-cols-12 gap-8 group">
-              {/* Timeline Dot */}
               <div className="absolute -left-[41px] md:left-auto md:right-0 md:col-span-1 flex justify-center mt-1.5 md:mr-[-11px]">
                 <div className="w-5 h-5 rounded-full bg-blue-600 ring-4 ring-white shadow-sm group-hover:scale-110 transition-transform"></div>
               </div>
-
-              {/* Date Column */}
               <div className="hidden md:block col-span-3 text-right pt-1">
-                <p className="font-bold text-slate-900">May 2024 - Present</p>
+                <p className="font-bold text-slate-900">May 2025 - Present</p>
                 <p className="text-sm text-blue-600 font-medium">Nunegal</p>
               </div>
-
-              {/* Content Column */}
               <div className="col-span-12 md:col-span-8">
                  <div className="md:hidden mb-2">
                     <span className="text-sm font-semibold text-blue-600">Nunegal</span>
                     <span className="text-slate-400 mx-2">•</span>
-                    <span className="text-sm text-slate-500">May 2024 - Present</span>
+                    <span className="text-sm text-slate-500">May 2025 - Present</span>
                  </div>
-
-                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-soft hover:shadow-lg transition-all">
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">Senior Software Developer</h3>
-                    <p className="text-slate-500 text-sm mb-4 italic">Legacy Modernization & AI Integration</p>
-
+                 <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-all">
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">Senior Backend Developer & AI Tooling Creator</h3>
+                    <p className="text-slate-500 text-sm mb-4 italic">Maritime Sector • Legacy Migration</p>
                     <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
-                      <li className="flex gap-3">
-                        <span className="bg-blue-100 text-blue-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                        <span>
-                          <strong>Legacy Migration:</strong> Technical Lead in migrating a critical Maritime ERP to <strong>Java 21, Spring Boot, and Thymeleaf</strong>.
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="bg-blue-100 text-blue-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                        <span>
-                          <strong>Re-engineering:</strong> Refactored API and complex PostgreSQL queries to ensure integrity in Jasper Reports.
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="bg-blue-100 text-blue-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                        <span>
-                          <strong>Innovation & AI:</strong> Integrated AI tools (Custom Gems) for code auditing and optimizing dev processes.
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="bg-blue-100 text-blue-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                        <span>
-                          <strong>DevOps Culture:</strong> Professionalized workflow with Git standardization and technical guides.
-                        </span>
-                      </li>
+                      <li className="flex gap-3"><span className="text-blue-500">✓</span><span><strong>Core Backend (Migration):</strong> Technical execution of migrating a Maritime ERP to <strong>Java 21 & Spring Boot</strong>.</span></li>
+                      <li className="flex gap-3"><span className="text-blue-500">✓</span><span><strong>AI Automation:</strong> Developing custom Gems for translations and code analyzers to standardize PR reviews.</span></li>
+                      <li className="flex gap-3"><span className="text-blue-500">✓</span><span><strong>Data Engineering:</strong> Re-engineering complex PostgreSQL queries for Jasper Reports continuity.</span></li>
                     </ul>
                  </div>
               </div>
@@ -247,36 +241,23 @@ const App = () => {
               <div className="absolute -left-[41px] md:left-auto md:right-0 md:col-span-1 flex justify-center mt-1.5 md:mr-[-11px]">
                 <div className="w-5 h-5 rounded-full bg-slate-400 ring-4 ring-white shadow-sm group-hover:scale-110 transition-transform"></div>
               </div>
-
               <div className="hidden md:block col-span-3 text-right pt-1">
-                <p className="font-bold text-slate-900">Apr 2024 - May 2024</p>
+                <p className="font-bold text-slate-900">Apr 2024 - May 2025</p>
                 <p className="text-sm text-slate-600 font-medium">NTT DATA</p>
               </div>
-
               <div className="col-span-12 md:col-span-8">
                  <div className="md:hidden mb-2">
                     <span className="text-sm font-semibold text-slate-700">NTT DATA</span>
                     <span className="text-slate-400 mx-2">•</span>
-                    <span className="text-sm text-slate-500">Apr 2024 - May 2024</span>
+                    <span className="text-sm text-slate-500">2024 - 2025</span>
                  </div>
-
-                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-soft hover:shadow-lg transition-all">
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">Software Developer</h3>
-                    <p className="text-slate-500 text-sm mb-4 italic">High Performance Optimization</p>
-
+                 <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-all">
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">Performance Specialist & Backend Developer</h3>
+                    <p className="text-slate-500 text-sm mb-4 italic">High Performance • React Integration</p>
                     <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
-                      <li className="flex gap-3">
-                        <span className="bg-slate-100 text-slate-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                        <span>
-                          <strong>Performance Tuning:</strong> Reduced execution time from <strong>10h to 30min</strong> using Multi-threading & SQL/MongoDB optimization.
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="bg-slate-100 text-slate-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                        <span>
-                          <strong>AI Adoption:</strong> Trained the team on AI tools to improve efficiency.
-                        </span>
-                      </li>
+                      <li className="flex gap-3"><span className="text-slate-400">✓</span><span><strong>Optimization:</strong> Reduced execution times by 95% (10h to 30min) using advanced multithreading.</span></li>
+                      <li className="flex gap-3"><span className="text-slate-400">✓</span><span><strong>Database:</strong> Integral management of MongoDB and SQL Server structures.</span></li>
+                      <li className="flex gap-3"><span className="text-slate-400">✓</span><span><strong>AI Leadership:</strong> Responsible for integrating AI tools to improve team efficiency.</span></li>
                     </ul>
                  </div>
               </div>
@@ -287,112 +268,103 @@ const App = () => {
               <div className="absolute -left-[41px] md:left-auto md:right-0 md:col-span-1 flex justify-center mt-1.5 md:mr-[-11px]">
                 <div className="w-5 h-5 rounded-full bg-slate-400 ring-4 ring-white shadow-sm group-hover:scale-110 transition-transform"></div>
               </div>
-
               <div className="hidden md:block col-span-3 text-right pt-1">
                 <p className="font-bold text-slate-900">Mar 2022 - Apr 2024</p>
                 <p className="text-sm text-slate-600 font-medium">Imatia Innovation</p>
               </div>
-
               <div className="col-span-12 md:col-span-8">
                  <div className="md:hidden mb-2">
                     <span className="text-sm font-semibold text-slate-700">Imatia</span>
                     <span className="text-slate-400 mx-2">•</span>
                     <span className="text-sm text-slate-500">2022 - 2024</span>
                  </div>
-
-                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-soft hover:shadow-lg transition-all">
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">Software Developer</h3>
-                    <p className="text-slate-500 text-sm mb-4 italic">Product Development & Full Stack</p>
-
+                 <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-all">
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">Full Stack Engineer</h3>
+                    <p className="text-slate-500 text-sm mb-4 italic">Fashion & Automotive • DDD Architecture</p>
                     <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
-                      <li className="flex gap-3">
-                         <span className="bg-slate-100 text-slate-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                         <span>Built a corporate CRM from scratch using <strong>Spring Boot & Angular</strong>.</span>
-                      </li>
-                      <li className="flex gap-3">
-                         <span className="bg-slate-100 text-slate-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                         <span>Migrated a Fashion Platform to the Automotive sector (Deployment from scratch).</span>
-                      </li>
-                      <li className="flex gap-3">
-                         <span className="bg-slate-100 text-slate-600 rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</span>
-                         <span>Microservices management using <strong>Docker</strong>.</span>
-                      </li>
+                      <li className="flex gap-3"><span className="text-slate-400">✓</span><span><strong>Architecture:</strong> Scalable microservices with DDD, Keycloak security, and Apache Kafka.</span></li>
+                      <li className="flex gap-3"><span className="text-slate-400">✓</span><span><strong>Migration:</strong> Independent management of adapting the platform for the Automotive sector.</span></li>
+                      <li className="flex gap-3"><span className="text-slate-400">✓</span><span><strong>Docker:</strong> Container orchestration and deployment scripting.</span></li>
                     </ul>
                  </div>
               </div>
             </div>
 
-            {/* Previous Roles (Grouped) */}
-             <div className="relative md:grid md:grid-cols-12 gap-8 group opacity-75">
-              <div className="absolute -left-[41px] md:left-auto md:right-0 md:col-span-1 flex justify-center mt-1.5 md:mr-[-11px]">
+             {/* Previous Roles */}
+             <div className="relative md:grid md:grid-cols-12 gap-8 group opacity-60 hover:opacity-100 transition-opacity">
+               <div className="absolute -left-[41px] md:left-auto md:right-0 md:col-span-1 flex justify-center mt-1.5 md:mr-[-11px]">
                 <div className="w-5 h-5 rounded-full bg-slate-200 ring-4 ring-white shadow-sm"></div>
               </div>
-
               <div className="hidden md:block col-span-3 text-right pt-1">
                 <p className="font-bold text-slate-500">2017 - 2020</p>
                 <p className="text-sm text-slate-400">Early Career</p>
               </div>
-
               <div className="col-span-12 md:col-span-8">
-                 <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                    <div className="mb-2">
-                        <h4 className="font-semibold text-slate-700">Intec Software</h4>
-                        <p className="text-xs text-slate-500">Web Developer & Support (WordPress, Systems)</p>
-                    </div>
-                    <div>
-                        <h4 className="font-semibold text-slate-700">Krack Zapaterías</h4>
-                        <p className="text-xs text-slate-500">IT Technician & Event Web Dev</p>
-                    </div>
-                 </div>
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                     <p className="text-sm text-slate-600"><strong>Intec Software</strong> (2020) & <strong>Krack Zapaterías</strong> (2017)</p>
+                     <p className="text-xs text-slate-500">Web Development (WordPress) & Technical Support</p>
+                  </div>
               </div>
-            </div>
+             </div>
 
           </div>
         </div>
       </section>
 
-      {/* Skills Grid */}
-      <section id="skills" className="py-20 bg-white">
+      {/* Skills Grid - Categorized */}
+      <section id="skills" className="py-20 bg-slate-50">
         <div className="container mx-auto px-6 max-w-5xl">
-            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Technical Arsenal</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Tech Stack</h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {/* Languages */}
-                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2"><Code size={20} className="text-blue-500"/> Languages</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+                {/* Core Backend */}
+                <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                    <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <div className="bg-blue-100 p-2 rounded-lg text-blue-600"><Code size={20} /></div>
+                        Core Backend (Expert)
+                    </h3>
                     <div className="flex flex-wrap gap-2">
-                        {['Java 8-21', 'JavaScript', 'SQL', 'HTML/CSS'].map(s => (
-                            <span key={s} className="bg-white px-2 py-1 rounded text-sm text-slate-600 border border-slate-200">{s}</span>
+                        {['Java 21', 'Spring Boot', 'PostgreSQL', 'SQL Server', 'MongoDB'].map(s => (
+                            <span key={s} className="bg-slate-50 px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 border border-slate-200">{s}</span>
                         ))}
                     </div>
                 </div>
 
-                 {/* Frameworks */}
-                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2"><Layers size={20} className="text-purple-500"/> Frameworks</h3>
+                 {/* Architecture & DevOps */}
+                 <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                    <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <div className="bg-purple-100 p-2 rounded-lg text-purple-600"><Layers size={20} /></div>
+                        Architecture & DevOps
+                    </h3>
                     <div className="flex flex-wrap gap-2">
-                        {['Spring Boot', 'Angular', 'React', 'Thymeleaf', 'Ontimize', 'Jasper Reports'].map(s => (
-                            <span key={s} className="bg-white px-2 py-1 rounded text-sm text-slate-600 border border-slate-200">{s}</span>
+                        {['Apache Kafka', 'Keycloak', 'Docker', 'Microservices', 'DDD', 'Git'].map(s => (
+                            <span key={s} className="bg-slate-50 px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 border border-slate-200">{s}</span>
                         ))}
                     </div>
                 </div>
 
-                 {/* Data */}
-                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2"><Database size={20} className="text-emerald-500"/> Data</h3>
+                 {/* AI & Tooling */}
+                 <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                    <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <div className="bg-emerald-100 p-2 rounded-lg text-emerald-600"><Cpu size={20} /></div>
+                        AI & Tooling
+                    </h3>
                     <div className="flex flex-wrap gap-2">
-                        {['PostgreSQL', 'MongoDB', 'SQL Server', 'Apache Kafka'].map(s => (
-                            <span key={s} className="bg-white px-2 py-1 rounded text-sm text-slate-600 border border-slate-200">{s}</span>
+                        {['GenAI Integration', 'Custom Gems', 'Prompt Engineering', 'Code Analyzers'].map(s => (
+                            <span key={s} className="bg-slate-50 px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 border border-slate-200">{s}</span>
                         ))}
                     </div>
                 </div>
 
-                 {/* Tools */}
-                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2"><Terminal size={20} className="text-orange-500"/> Tools & Ops</h3>
+                 {/* Frontend & Ecosystem */}
+                 <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                    <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <div className="bg-orange-100 p-2 rounded-lg text-orange-600"><Globe size={20} /></div>
+                        Frontend & Ecosystem
+                    </h3>
                     <div className="flex flex-wrap gap-2">
-                        {['Git / GitHub', 'Docker', 'Jira', 'Scrum / Kanban', 'GenAI'].map(s => (
-                            <span key={s} className="bg-white px-2 py-1 rounded text-sm text-slate-600 border border-slate-200">{s}</span>
+                        {['Angular', 'React', 'Jira', 'Thymeleaf', 'Jasper Reports'].map(s => (
+                            <span key={s} className="bg-slate-50 px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 border border-slate-200">{s}</span>
                         ))}
                     </div>
                 </div>
@@ -401,60 +373,38 @@ const App = () => {
       </section>
 
       {/* Education & Certs */}
-      <section id="education" className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 bg-white border-t border-slate-200">
         <div className="container mx-auto px-6 max-w-4xl">
            <div className="grid md:grid-cols-2 gap-12">
-               {/* Education */}
                <div>
                    <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
                        <GraduationCap className="text-blue-600" /> Education
                    </h2>
-                   <div className="space-y-8 relative border-l border-slate-200 ml-3 pl-8">
+                   <div className="space-y-6">
                        {[
-                           { title: "Senior Technician in Multiplatform App Dev", school: "IES de Teis", type: "Higher Degree" },
-                           { title: "Senior Technician in Network Systems Admin", school: "IES de Teis", type: "Higher Degree" },
-                           { title: "Microcomputer Systems and Networks", school: "IES Chan do Monte", type: "Technician" }
+                           { title: "Senior Technician in Multiplatform App Dev", school: "IES de Teis" },
+                           { title: "Senior Technician in Network Systems Admin", school: "IES de Teis" },
+                           { title: "Microcomputer Systems and Networks", school: "IES Chan do Monte" }
                        ].map((edu, i) => (
-                           <div key={i} className="relative">
-                               <div className="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-slate-50"></div>
-                               <h4 className="font-bold text-slate-900">{edu.title}</h4>
-                               <p className="text-blue-600 text-sm font-medium">{edu.school}</p>
+                           <div key={i} className="pl-4 border-l-2 border-slate-100">
+                               <h4 className="font-bold text-slate-900 text-sm">{edu.title}</h4>
+                               <p className="text-slate-500 text-xs">{edu.school}</p>
                            </div>
                        ))}
                    </div>
                </div>
 
-               {/* Certs & Languages */}
                <div>
                    <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
-                       <CheckCircle2 className="text-green-600" /> Certifications & Languages
+                       <CheckCircle2 className="text-green-600" /> Certifications
                    </h2>
-
-                   <div className="mb-8">
-                       <h3 className="font-semibold text-slate-700 mb-3 uppercase text-xs tracking-wider">Certifications</h3>
-                       <ul className="space-y-2">
-                           {['Java Masterclass', 'Spring Boot 3 & Microservices', 'GenAI for Devs', 'Software Architecture'].map(c => (
-                               <li key={c} className="flex items-center gap-2 text-slate-600 text-sm">
-                                   <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div> {c} (Udemy)
-                               </li>
-                           ))}
-                       </ul>
-                   </div>
-
-                   <div>
-                       <h3 className="font-semibold text-slate-700 mb-3 uppercase text-xs tracking-wider">Languages</h3>
-                       <div className="flex gap-4">
-                           <div className="text-center">
-                               <div className="text-lg font-bold text-slate-900">Native</div>
-                               <div className="text-xs text-slate-500">Spanish / Gallego</div>
-                           </div>
-                           <div className="w-px bg-slate-200"></div>
-                           <div className="text-center">
-                               <div className="text-lg font-bold text-slate-900">B1/B2</div>
-                               <div className="text-xs text-slate-500">English (Intermediate)</div>
-                           </div>
-                       </div>
-                   </div>
+                   <ul className="space-y-3">
+                       {['Java Masterclass', 'Spring Boot 3 & Microservices', 'GenAI for Devs', 'Software Architecture'].map(c => (
+                           <li key={c} className="flex items-center gap-2 text-slate-700 text-sm bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                               <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div> {c}
+                           </li>
+                       ))}
+                   </ul>
                </div>
            </div>
         </div>
@@ -465,23 +415,20 @@ const App = () => {
          <div className="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6">
              <div className="text-center md:text-left">
                  <h2 className="text-2xl font-bold text-white mb-1">Joel Piñeiro Suárez</h2>
-                 <p className="text-slate-500 text-sm">Senior Software Developer</p>
+                 <p className="text-slate-500 text-sm">Senior Backend Engineer</p>
              </div>
 
              <div className="flex flex-col md:flex-row gap-6 text-sm font-medium">
                  <a href="mailto:joelps117@hotmail.es" className="hover:text-white transition-colors flex items-center gap-2">
                     <Mail size={16}/> joelps117@hotmail.es
                  </a>
-                 <a href="tel:+34681248714" className="hover:text-white transition-colors flex items-center gap-2">
-                    <Phone size={16}/> +34 681 24 87 14
+                 <a href="https://www.linkedin.com/in/joel-piñeiro-suárez-834199203" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+                    <Linkedin size={16}/> LinkedIn
                  </a>
-                 <a href="https://github.com/Jowy43" className="hover:text-white transition-colors flex items-center gap-2">
-                    <Github size={16}/> github.com/Jowy43
+                 <a href="https://github.com/Jowy43" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+                    <Github size={16}/> GitHub
                  </a>
              </div>
-         </div>
-         <div className="text-center mt-12 text-slate-600 text-xs">
-             © 2024 Joel Piñeiro. Built with React, Tailwind & deployed on GitHub Pages.
          </div>
       </footer>
 
