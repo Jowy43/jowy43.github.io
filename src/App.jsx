@@ -77,7 +77,7 @@ const App = () => {
           <span className="flex items-center gap-1"><MapPin size={14} /> Pontevedra, España</span>
           <span className="hidden md:inline text-slate-300">|</span>
           <a href="https://www.linkedin.com/in/joel-piñeiro-suárez-834199203" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-            <Linkedin size={14} /> linkedin.com/in/joel-piñeiro-suárez
+            <Linkedin size={14} /> LinkedIn
           </a>
           <span className="hidden md:inline text-slate-300">|</span>
           <span className="flex items-center gap-1"><Mail size={14} /> joelps117@hotmail.es</span>
@@ -88,10 +88,10 @@ const App = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="flex items-center gap-2 bg-blue-600 text-white px-8 py-3.5 rounded-full font-medium hover:bg-blue-700 transition-all shadow-glow hover:shadow-blue-500/25">
+          <a href="/Joel_Pineiro_CV.pdf" download="Joel_Pineiro_CV.pdf" className="flex items-center gap-2 bg-blue-600 text-white px-8 py-3.5 rounded-full font-medium hover:bg-blue-700 transition-all shadow-glow hover:shadow-blue-500/25">
             <Download size={18} />
             Download CV
-          </button>
+          </a>
           <a href="https://github.com/Jowy43" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-8 py-3.5 rounded-full font-medium hover:bg-slate-50 transition-all">
             <Github size={18} />
             GitHub
